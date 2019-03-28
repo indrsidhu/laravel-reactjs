@@ -41,13 +41,14 @@ const styles = theme => ({
 		display: "block",
 		padding: commonPadding,
 		textDecoration: 'none',
+		borderLeft: '3px solid transparent',
 	},
 	sidebarNavLinkActive: {
 		display: "block",
 		padding: commonPadding,
 		background: "#FFF",
 		textDecoration: 'none',
-		borderLeft: '4px solid #4077E4',
+		borderLeft: '3px solid #4077E4',
 		boxShadow: '0px 3px 3px #DDD'
 	},
 	content:{
