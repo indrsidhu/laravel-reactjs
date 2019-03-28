@@ -1,0 +1,4 @@
+$primary-color: #aa00ff;
+@import '../../node_modules/loaders.css/src/animations/ball-clip-rotate.scss';
+.loader-hidden {display: none;}
+.loader-active {display: block; margin:30px 0; text-align:center}
