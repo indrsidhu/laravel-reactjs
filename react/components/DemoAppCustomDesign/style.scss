@@ -1,10 +1,17 @@
 @import "variables.scss";
+html,body{
+    padding: 0;
+    margin:0;
+}
 .container{
     display: flex;
 }
 .container .sidebar{
     z-index: 9;
     flex: 0.3;
+}
+.menuIconButton{
+    display: none !important;
 }
 .menuIcon{
     color: #FFF;
@@ -24,6 +31,9 @@
         -moz-transition: width 0.300s ease-in-out;
         -o-transition: width 0.300s ease-in-out;
         transition: width 0.300s ease-in-out;        
+    }
+    .menuIconButton{
+        display: inline-block !important;
     }
     .menuIcon{
         display: inline-block !important;
@@ -48,6 +58,16 @@
     justify-content: space-between;
     border-bottom: 1px solid #DDD;
 }
+.sidebarHeaderLeft{
+    font-size: 16px !important;
+    font-weight: bold !important;
+    letter-spacing: 2px !important;
+}
+.sidebarHeaderRight{
+    font-size: 14px !important;
+    letter-spacing: 2px !important;
+    text-transform: capitalize !important;
+}
 .sidebarNav{
     list-style: none;
     margin: $commonPadding;
@@ -63,12 +83,22 @@
     text-decoration: none;
     border-left: 3px solid transparent;
 }
+.sidebarNavLink h6, .sidebarNavLinkActive h6{
+    font-size: 16px !important;
+    letter-spacing: 1px;
+}
+.sidebarNavLink span, .sidebarNavLinkActive span{
+    font-size: 13px !important;
+    color: #333;
+    letter-spacing: 1px;
+}
+
 .sidebarNavLinkActive{
     display: block;
     padding: $commonPadding;
     background: #FFF;
     text-decoration: none;
-    border-left: 3px solid #4077E4;
+    border-left: 3px solid $primaryColor;
     box-shadow: 0px 3px 3px #DDD
 }
 .content{

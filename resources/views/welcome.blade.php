@@ -7,15 +7,9 @@
 
         <title>Laravel</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
-        <style type="text/css">
-            html,body{
-                padding: 0;
-                margin:0;
-            }
-        </style>
     </head>
     <body>
-        <div id="demoApp">Loading...</div>
+        <div id="demoApp"><center>Loading...</center></div>
         <!-- Reactjs -->
         <script src="{{ asset('/js/webappvlf.js') }}"></script>    
     </body>

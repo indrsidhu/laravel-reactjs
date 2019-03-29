@@ -9,6 +9,7 @@ import AppBar from './AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import UploadIcon from '@material-ui/icons/CloudUpload';
 import MenuIcon from '@material-ui/icons/Menu';
+import LeftArrowIcon from '@material-ui/icons/Arrowback';
 import IconButton from '@material-ui/core/IconButton';
 
 import './style.scss';
@@ -73,8 +74,8 @@ export class DemoAppCustomDesign extends Component {
 			return (
 				<li key={"navItm-" + index}>
 					<a href={"#" + dataitem.slug} onClick={(e) => this.handleNavClick(e, dataitem)} className={(item.id == dataitem.id) ? 'sidebarNavLinkActive' : 'sidebarNavLink'}>
-						<Typography variant="h6">{dataitem.title}</Typography>
-						<Typography variant="subtitle1">{dataitem.subtitle}</Typography>
+						<Typography variant="h6" component="h6">{dataitem.title}</Typography>
+						<Typography variant="subtitle1" component="span">{dataitem.subtitle}</Typography>
 					</a>
 				</li>
 			);
@@ -96,8 +97,8 @@ export class DemoAppCustomDesign extends Component {
 			<div className="container">
 				<div className={(isSideBarOpen) ? "siderbar siderbarActive" : "sidebar"}>
 					<div className="sidebarHeader">
-						<Typography variant="h6">FILES</Typography>
-						<Button>Upload <UploadIcon className="UploadIcon" /></Button>
+						<Typography variant="h6" className="sidebarHeaderLeft">FILES</Typography>
+						<Button className="sidebarHeaderRight">Upload <UploadIcon className="UploadIcon" /></Button>
 					</div>
 					<div className="sidebarNavWrapper">
 						{this.renderNav()}
@@ -106,7 +107,7 @@ export class DemoAppCustomDesign extends Component {
 				<div className="main">
 					<AppBar>
 						<Toolbar>
-							<IconButton onClick={(e)=>this.handleDrawerMennu()}><MenuIcon className="menuIcon" /></IconButton>
+							<IconButton className="menuIconButton" onClick={(e)=>this.handleDrawerMennu()}>{(isSideBarOpen) ? <LeftArrowIcon className="menuIcon" /> : <MenuIcon className="menuIcon" />}</IconButton>
 							<Typography variant="h6" color="inherit">
 								{item.title}
 							</Typography>
