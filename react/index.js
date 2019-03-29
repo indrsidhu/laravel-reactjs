@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Button from '@material-ui/core/Button';
-import DemoApp from './components/DemoApp';
+import DemoAppCustomDesign from './components/DemoAppCustomDesign/DemoAppCustomDesign';
 
 const title = 'My Minimal React Webpack Babel Setup done';
 
@@ -10,7 +9,7 @@ class App extends React.Component{
 		return (
 			<div>
 
-				<DemoApp />
+				<DemoAppCustomDesign />
 
 			</div>
 		);

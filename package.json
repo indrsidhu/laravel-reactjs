@@ -1,5 +1,5 @@
 {
-  "name": "visionclassifier",
+  "name": "reactjsApp",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -15,7 +15,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "homepage": "https://www.visionclassifier.com",
+  "homepage": "",
   "devDependencies": {
     "@babel/core": "^7.4.0",
     "@babel/preset-env": "^7.4.2",

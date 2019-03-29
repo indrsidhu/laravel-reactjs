@@ -1,0 +1,79 @@
+@import "variables.scss";
+.container{
+    display: flex;
+}
+.container .sidebar{
+    z-index: 9;
+    flex: 0.3;
+}
+.menuIcon{
+    color: #FFF;
+    display: none !important;
+}
+@media only screen and (max-width: 800px) {
+    .container .sidebar {
+        position: absolute;
+        width:0px;
+        overflow: hidden;      
+    }
+    .container .siderbarActive{
+        background-color: #F3F3F3;
+        width:300px;
+        box-shadow: 1px 2px 3px #999;
+        -webkit-transition: width 0.300s ease-in-out;
+        -moz-transition: width 0.300s ease-in-out;
+        -o-transition: width 0.300s ease-in-out;
+        transition: width 0.300s ease-in-out;        
+    }
+    .menuIcon{
+        display: inline-block !important;
+    }
+}
+.container .main{
+    flex: 1;
+}
+.appBar{
+    background-color:$primaryColor;
+    color: #FFF;
+}
+.sidebar{
+    background-color: #F3F3F3;
+    height: 100vh;
+}
+.sidebarHeader{
+    height: 45;
+    display: flex;
+    align-items: center;
+    padding: $commonPadding;
+    justify-content: space-between;
+    border-bottom: 1px solid #DDD;
+}
+.sidebarNav{
+    list-style: none;
+    margin: $commonPadding;
+    padding: 0px;
+}
+.sidebarNav li{
+    list-style: none;
+}
+
+.sidebarNavLink{
+    display: block;
+    padding: $commonPadding;
+    text-decoration: none;
+    border-left: 3px solid transparent;
+}
+.sidebarNavLinkActive{
+    display: block;
+    padding: $commonPadding;
+    background: #FFF;
+    text-decoration: none;
+    border-left: 3px solid #4077E4;
+    box-shadow: 0px 3px 3px #DDD
+}
+.content{
+    padding: $commonPadding * 2
+}
+.UploadIcon{
+    margin-left:15px
+}
